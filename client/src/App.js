@@ -4,6 +4,7 @@ import PostsListPage from "./pages/PostsListPage";
 import PostFormPage from "./pages/PostFormPage";
 import ShowPostPage from "./pages/ShowPostPage";
 import AboutUsPage from "./pages/AboutUsPage";
+import Form from "./Form";
 
 import "./App.css";
 
@@ -25,6 +26,11 @@ function Navigation(props) {
               About Us
             </NavLink>
           </li>
+          <li className="nav-item">
+            <NavLink className="nav-link" to="/form">
+              Form
+            </NavLink>
+          </li>
         </ul>
       </div>
     </nav>
@@ -41,6 +47,7 @@ function App() {
             <Route path="/posts/new" element={<PostFormPage />} />
             <Route path="/posts/:id" element={<ShowPostPage />} />
             <Route path="/about-us" element={<AboutUsPage />} />
+            <Route path="/form" element={<Form />} />
             <Route path="/" element={<PostsListPage />} />
           </Routes>
         </div>
